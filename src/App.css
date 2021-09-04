@@ -1,0 +1,213 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    border: 4px solid rgb(8, 8, 8);
+    border-bottom: 6px solid black;
+    border-top: 6px solid black;
+    box-shadow: inset 6px 2px 10px 2px grey;
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+}
+header button{
+    font-size: 3.4rem;
+    /* font-family:cursive; */
+    /* font-family: monospace; */
+    font-family: serif;
+    border-radius: 8px;
+    font-weight: bold;
+    text-shadow: 2px 2px red;
+    background: linear-gradient(
+        to bottom,
+        rgb(44, 43, 43),
+        white,
+        grey
+    );
+    /* transition: background 1s ease-in-out; */
+}
+header button:hover{
+    cursor: pointer;
+    background:linear-gradient(
+        to bottom,
+        rgb(34, 32, 32),
+        rgb(192, 189, 189),
+        rgb(70, 68, 68)
+    );
+}
+header .html{
+    border: 1px solid green;
+}
+header .css{
+    border: 1px solid green;
+}
+header .js{
+    border: 1px solid green;
+}
+.top-box{
+    background-color: hsl(225,6%,25%);
+}
+.box{
+    height: 50vh;
+    display: flex;
+}
+.editor-container{
+    /* border: 1px solid red; */
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background-color: hsl(225, 6%, 25%);
+    /* box-shadow: 1px 1px 25px 2px; */
+    border-right: 5px solid rgb(41, 39, 39);
+    border-bottom: 4px solid #333;
+}
+.editor-title{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: hsl(225, 6%, 13%); */
+    background: linear-gradient(
+        to top,
+        green,
+        rgb(75, 75, 206),
+        rgba(4, 245, 245, 0.747)
+    );
+    color: rgb(48, 43, 43);
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+}
+.editor-container.collapsed .CodeMirror-scroll{
+    position: absolute;
+}
+.CodeMirror{
+    height: 100% !important;
+}
+.code-mirror-wrapper{
+    flex-grow: 1;
+}
+.editor-container{
+    transition: 1s;
+}
+.editor-container.collapsed{
+    flex-grow: 0;
+}
+.editor-container.closed{
+    display: none;
+}
+.btn-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4px 4px;
+    background: linear-gradient(
+        to right,
+        rgb(39, 38, 38),
+        grey,
+        rgb(214, 207, 207)
+    );
+}
+.btn-1 button{
+    font-size: 3rem;
+    color: hsl(225, 6%, 13%);
+    background-color: grey;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px 4px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    transition: 0.5s;
+}
+.btn-1 button:hover{
+    background-color: rgb(177, 170, 170);
+    /* transform: scale(1.1); */
+    /* background-color: rgba(68, 64, 64, 0.753); */
+}
+.main-container{
+    display: flex;
+    flex-direction: row;
+    transition: 1s;
+}
+.box_set{
+    flex-direction: column;
+    width: 800px;
+    height: 800px;
+    transition: 1s;
+}
+.add{
+    width: 44rem;
+    height: 49.5rem;
+    border: 4px solid black;
+    transition: 1s;
+}
+.left_right{
+    color: red;
+    font-weight: bold;
+    border-radius: 10px;
+    /* transition: 1s; */
+}
+.left_right:hover{
+    cursor: pointer;
+    background-color: #333;
+    color: wheat;
+    transform: scale(1.1);
+}
+@media (max-width:650px){
+    header button{
+        font-size: 2rem;
+    }
+}
+@media (max-width:415px){
+    header button{
+        font-size: 1rem;
+    }
+    .btn-1{
+        display: none;
+    }
+    .top-box{
+        display: flex;
+        flex-direction: column;
+        color: red;
+        background-color: red;
+    }
+}
+@media (max-width:240px){
+    header button{
+        font-size: 0.6rem;
+    }
+}
+@media (max-width:870px){
+    .add{
+        width: 30rem;
+        height: 49.5rem;
+    }
+}
+@media (max-width:632px){
+    .add{
+        width: 20rem;
+        height: 49rem;
+    }
+}
+@media (max-width:484px){
+    .add{
+        width: 15rem;
+        height: 49rem;
+    }
+}
+@media (max-width:395px){
+    .add{
+        width: 10rem;
+        height: 49.5rem;
+    }
+}
+@media (max-width:318px){
+    .add{
+        width: 6rem;
+        height: 49.5rem;
+    }
+}
